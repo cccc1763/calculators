@@ -1,29 +1,29 @@
 
-// calcCpyDlg.h : Çì´õ ÆÄÀÏ
+// calcCpyDlg.h : í—¤ë” íŒŒì¼
 //
 
 #pragma once
 #include "afxwin.h"
 
 
-// CcalcCpyDlg ´ëÈ­ »óÀÚ
+// CcalcCpyDlg ëŒ€í™” ìƒì
 class CcalcCpyDlg : public CDialogEx
 {
-// »ı¼ºÀÔ´Ï´Ù.
+// ìƒì„±ì…ë‹ˆë‹¤.
 public:
-	CcalcCpyDlg(CWnd* pParent = NULL);	// Ç¥ÁØ »ı¼ºÀÚÀÔ´Ï´Ù.
+	CcalcCpyDlg(CWnd* pParent = NULL);	// í‘œì¤€ ìƒì„±ìì…ë‹ˆë‹¤.
 
-// ´ëÈ­ »óÀÚ µ¥ÀÌÅÍÀÔ´Ï´Ù.
+// ëŒ€í™” ìƒì ë°ì´í„°ì…ë‹ˆë‹¤.
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_CALCCPY_DIALOG };
 #endif
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV Áö¿øÀÔ´Ï´Ù.
-// ±¸ÇöÀÔ´Ï´Ù.
+	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV ì§€ì›ì…ë‹ˆë‹¤.
+// êµ¬í˜„ì…ë‹ˆë‹¤.
 protected:
 	HICON m_hIcon;
 
-	// »ı¼ºµÈ ¸Ş½ÃÁö ¸Ê ÇÔ¼ö
+	// ìƒì„±ëœ ë©”ì‹œì§€ ë§µ í•¨ìˆ˜
 	virtual BOOL OnInitDialog();
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
@@ -107,9 +107,9 @@ public:
 			int temp;
 
 			// parsing loop
-			// NULL = -858993460 .. ¿Ö NULLÀ» ÀÎ½ÄÀ» ¸øÇÒ±î?..
+			// NULL = -858993460 .. ì™œ NULLì„ ì¸ì‹ì„ ëª»í• ê¹Œ?..
 
-			for (inputIdx = 0; inputIdx != -858993460; inputIdx++) {
+			for (inputIdx = 0; inputArr[inputIdx] != -858993460; inputIdx++) {
 				if (inputArr[inputIdx] == '\0')
 					break;
 				// number processing
